@@ -36,7 +36,7 @@ public class Input
 	 * retorna el caràcter ASCII 0.
 	 * @return El caràcter llegit des del teclat
 	 */
-	public static char llegirChar()
+	public static char readChar()
 	{
                         // Inicialitzem el caràcter a caràcter buit. Si es produeix algun error,
                         // es retornarà aquest valor
