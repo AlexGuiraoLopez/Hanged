@@ -6,8 +6,8 @@ package hanged;
 public class Board 
 {
     /**
-     * Dibuja el tablero del juego.
-     */
+    * Dibuja el tablero del juego con la palabra oculta.
+    */
     public static void drawBoard()
     {
         for (int i = 0; i<Word.getWord().length(); i++)
@@ -23,6 +23,9 @@ public class Board
         }
     }
     
+    /**
+     * Dibuja el estado del ahorcado.
+     */
     public static void drawHanged()
     {
         switch (GameManager.getMistakes())
@@ -75,7 +78,11 @@ public class Board
         }
     }
     
-    public static void drawBanner(){
+    /**
+     * Dibuja el banner de introducción al juego.
+     */
+    public static void drawBanner()
+    {
       
         System.out.println("    |/|               ╔═════════╗");
         System.out.println("    |/|               ║    AHORCADO   ║  ");

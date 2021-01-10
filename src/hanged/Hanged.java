@@ -11,17 +11,16 @@ public class Hanged
     public static void main(String[] args) 
     {
         //==============================PREPARACIÓN====================================
-        Board.drawBanner();
-        Word.setWord();
-        System.out.println("La palabra secreta es: " + Word.getWord());
-        Board.drawBoard();
+        Board.drawBanner(); //Dibuja el banner de bienvenida.
+        Word.setWord(); //El sistema elige una palabra aleatoria.
+        System.out.println("La palabra secreta es: " + Word.getWord()); //TEST ONLY
+        Board.drawBoard();  //Dibuja el tablero con los espacios ocultos.
         
         //==============================EJECUCIÓN======================================
         do{
-            GameManager.PlayTurn();
-            Board.drawBoard();
-            System.out.println();
-            
+            GameManager.PlayTurn(); //Ejecuta el turno del jugador.
+            Board.drawBoard();  //Dibuja el tablero en su estado actual.
+            System.out.println();   //Salto de línea.
         }while(GameManager.isFinished()==false && GameManager.gameOver()==false);
         
         //===============================RESULTADOS===================================
