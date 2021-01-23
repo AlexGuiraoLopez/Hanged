@@ -6,7 +6,8 @@ package hanged;
  */
 public class Word 
 {
-    public static String [] wordList = {"gato", "armario", "software", "hardware", "manzana"}; //Lista de palabras.
+    public static String [] wordList = {"gato", "armario", "software", "hardware", "manzana", "guitarra", "cortina", 
+        "botella", "cd", "marmota", "kinoa"}; //Lista de palabras.
     public static String currentWord;   //Palabra en juego.
     
     /**

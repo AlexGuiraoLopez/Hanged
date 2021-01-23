@@ -77,7 +77,7 @@ public class GameManager
                 isFinished=true;
             }
             counter++;
-        }while(counter<Word.getWord().length()&&guess[counter]==true );
+        }while(counter<Word.getWord().length()&&guess[counter-1]==true );
         
         return isFinished;
     }

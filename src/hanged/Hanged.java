@@ -13,7 +13,7 @@ public class Hanged
         //==============================PREPARACIÓN====================================
         Board.drawBanner(); //Dibuja el banner de bienvenida.
         Word.setWord(); //El sistema elige una palabra aleatoria.
-        System.out.println("La palabra secreta es: " + Word.getWord()); //TEST ONLY
+       // System.out.println("La palabra secreta es: " + Word.getWord()); //TEST ONLY
         Board.drawBoard();  //Dibuja el tablero con los espacios ocultos.
         
         //==============================EJECUCIÓN======================================
