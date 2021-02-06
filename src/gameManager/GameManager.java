@@ -1,4 +1,10 @@
-package hanged;
+package gameManager;
+
+import board.Board;
+import input.Input;
+import hanged.Word;
+import stringUtil.StringUtil;
+
 /**
  * Gestiona el desarrollo del juego.
  * @author Alex Guirao López <aguiraol2021@cepnet.net>
@@ -8,7 +14,7 @@ public class GameManager
     final static int MAX_MISTAKES = 5;  //Número máximo de errores permitido.
     
     //Posiciones de la palabra descubiertas.
-    public static boolean[] guess = new boolean [Word.getWord().length()];
+    public static boolean[] hiddenLetter = new boolean [Word.getWord().length()];
     
     public static int mistakes=0; //Fallos del jugador.
       
@@ -17,39 +23,34 @@ public class GameManager
      * @param _index posición de la letra dentro de la palabra.
      * @return (true) si esa letra ha sido adivinada por el usuario.
      */
-    public static boolean getGuess(int _index)
+    public static boolean getHiddenLetter(int _index)
     {
-        return guess[_index];
+        return hiddenLetter[_index];
     }
     
     /**
      * Ejecuta un turno de juego.
+     * @param _word palabra en juego.
      */
-    public static void PlayTurn()
+    public static void PlayTurn(String _word)
     {
         System.out.print("Escribe una letra: ");
         char letter = Input.readChar();
-        int mistakeCount=0; //Contador de errores del turno actual.
         
-        for (int i = 0; i<Word.getWord().length();i++)
-        {
-            if (Word.getWord().charAt(i)==letter)
-            {
-                guess[i]=true;  //Se ha encontrado la letra en la posición actual de la palabra.
-            }
-            else
-            {
-                mistakeCount++; //No se ha encontrado la letra y se suma uno al contador de errores del turno actual.
-            }
-        }
-        
-        /*Si el contador de errores actual equivale a lo que mide la palabra quiere decir que
-        * la letra seleccionada por el jugador no está en ninguna de las de la palabra.
-        */
-        if (mistakeCount == Word.getWord().length())
+        if (StringUtil.isInString(_word, letter)==0)
         {
             mistakes++; //Añade un fallo al contador general.
             Board.drawHanged(); //Dibuja el ahorcado para que el jugador pueda ver el estado de su futura muerte.
+        }
+        else
+        {
+            for (int i = 0; i<_word.length();i++)
+            {
+                if (_word.charAt(i)==letter)
+                {
+                    hiddenLetter[i]=true;  //Se ha encontrado la letra en la posición actual de la palabra.
+                }
+            }
         }
     }
     
@@ -68,18 +69,23 @@ public class GameManager
      */
     public static boolean isFinished()
     {
-        boolean isFinished=false;
+        boolean isFinished=true;
         int counter=0;
         
-        do{
-            if (counter == guess.length-1)
+        while(isFinished&&counter<hiddenLetter.length)
+        {
+            if (hiddenLetter[counter]==true)
             {
-                isFinished=true;
+                counter++;
             }
-            counter++;
-        }while(counter<Word.getWord().length()&&guess[counter-1]==true );
-        
+            else
+            {
+                isFinished=false;
+            }
+        }
+    
         return isFinished;
+    
     }
     
     /**

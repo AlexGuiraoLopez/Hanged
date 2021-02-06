@@ -1,4 +1,8 @@
-package hanged;
+package board;
+
+import gameManager.GameManager;
+import hanged.Word;
+
 /**
  * Tablero del juego.
  * @author Alex Guirao López <aguiraol2021@cepnet.net>
@@ -12,7 +16,7 @@ public class Board
     {
         for (int i = 0; i<Word.getWord().length(); i++)
         {
-            if (GameManager.getGuess(i)==true)
+            if (GameManager.getHiddenLetter(i)==true)
             {
                 System.out.print(" " + Word.getWord().charAt(i) + " ");
             }
@@ -21,6 +25,7 @@ public class Board
                 System.out.print(" _ ");   
             }
         }
+        System.out.println();
     }
     
     /**

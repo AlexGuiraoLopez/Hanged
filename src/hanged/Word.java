@@ -1,13 +1,12 @@
 package hanged;
-
 /**
  * Palabra escondida que el jugador debe adivinar.
  * @author Alex Guirao López <aguiraol2021@cepnet.net>
  */
 public class Word 
 {
-    public static String [] wordList = {"gato", "armario", "software", "hardware", "manzana", "guitarra", "cortina", 
-        "botella", "cd", "marmota", "kinoa"}; //Lista de palabras.
+    public static String [] wordList = {"hardware","gato", "armario", "software", "manzana", "guitarra", "cortina", 
+        "botella", "marmota", "kinoa"}; //Lista de palabras.
     public static String currentWord;   //Palabra en juego.
     
     /**

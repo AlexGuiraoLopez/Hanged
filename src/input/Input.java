@@ -1,4 +1,4 @@
-package hanged;
+package input;
 
 // Imports
 import java.math.BigDecimal;
