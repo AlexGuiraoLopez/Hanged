@@ -1,7 +1,7 @@
 package hanged;
 /**
- * Palabra escondida que el jugador debe adivinar.
- * @author Alex Guirao López <aguiraol2021@cepnet.net>
+ * Lista de palabras escondidas que el jugador debe adivinar.
+ * @author Alex Guirao López <alexguiraolopez@gmail.com>
  */
 public class Word 
 {

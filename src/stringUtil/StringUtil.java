@@ -1,14 +1,8 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-
 package stringUtil;
 
 /**
- * 
- * @author Alex Guirao López <aguiraol2021@cepnet.net>
+ * Librería con métodos útiles para trabajar con Strings
+ * @author Alex Guirao López <alexguiraolopez@gmail.com>
  */
 public class StringUtil 
 {

@@ -1,6 +1,7 @@
 package color;
 
-public class ConsoleColors {
+public class ConsoleColors 
+{
     public static final String RESET = "\033[0m";  // Text Reset
 
     public static final String ERASE = "\033[H\033[2J";

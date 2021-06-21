@@ -6,8 +6,8 @@ import java.math.BigInteger;
 import java.util.Scanner;
 
 /**
- * 
- * @author Alex Guirao López
+ * Recibe una respuesta del usuario por teclado.
+ * @author Alex Guirao López <alexguiraolopez@gmail.com>
  */
 public class Input
 {

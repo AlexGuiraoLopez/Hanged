@@ -5,7 +5,7 @@ import hanged.Word;
 
 /**
  * Tablero del juego.
- * @author Alex Guirao López <aguiraol2021@cepnet.net>
+ * @author Alex Guirao López <alexguiraolopez@gmail.com>
  */
 public class Board 
 {
